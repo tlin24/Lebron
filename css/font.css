@@ -12,6 +12,14 @@
     src: url(../fonts/Simplon\ Mono.ttf) format('truetype');
 }
 
+
+@font-face {
+    font-family: "Simplon M";
+    font-weight: medium;
+	font-style: monospace;
+    src: url(../fonts/SimplonMono-Medium.ttf) format('truetype');
+}
+
 @font-face {
     font-family: "Givonic";
     font-weight: normal;
