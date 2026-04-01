@@ -1,6 +1,28 @@
 @font-face {
-    font-family: "Bodoni_72";
+    font-family: "Rainer";
+    font-weight: bold;
+	font-style: normal;
+    src: url(../fonts/RainerTrial-Bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: "Simplon";
     font-weight: normal;
-	font-style: serif;
-    src: url(../fonts/Bodoni\ 72\ Smallcaps\ Book.ttf) format('truetype');
+	font-style: monospace;
+    src: url(../fonts/Simplon\ Mono.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Givonic";
+    font-weight: normal;
+	font-style: normal;
+    src: url(../fonts/Givonic-Regular.otf) format('truetype');
+}
+
+
+@font-face {
+    font-family: "NeueMontreal";
+    font-weight: bold;
+	font-style: normal;
+    src: url(../fonts/NeueMontreal-Bold.otf) format('truetype');
 }

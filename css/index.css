@@ -4,63 +4,85 @@ header {
   left: 0;
   width: 100%;
   z-index: 9999;
-  height: 200px;
-  background: linear-gradient(
-    to bottom,
-    rgba(49, 15, 121, 0.98) 0%,
-    rgba(49, 15, 121, 0.92) 20%,
-    rgba(49, 15, 121, 0.75) 40%,
-    rgba(49, 15, 121, 0.45) 65%,
-    rgba(49, 15, 121, 0.18) 85%,
-    rgba(49, 15, 121, 0) 100%
-  );
-}
+  height: 7rem;
+  background-color: #310F79;
 
-.navbar {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 0.5rem 10%;
+  align-items: center;
 }
 
-.navbar ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 20px;
-}
-
-.navbar ul li a {
-  position: relative;
-  color: #000000;
-  font-family: "NeueMontreal", sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-}
-
-.navbar ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: #2323ff;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease;
-}
-
-.navbar ul li a:hover {
-  color: #2323ff;
-}
-
-.navbar ul li a:hover::after {
-  transform: scaleX(1);
+header .logo {
+  height: 5rem;  
+  width: auto;
 }
 
 body {
     background-color: #F4CC50;
     margin: 0 auto;
 }
+
+
+
+.intro {
+  position: relative;
+  min-height: 100vh;
+  background-color: #F4CC50;
+  overflow: hidden;
+  padding-top: 7rem;
+}
+
+.intro-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  top: 11rem;
+  left: 4rem;
+  right: 4rem;
+  width: 35rem;
+  z-index: 3;
+}
+
+.intro-meta p {
+  font-family: "Simplon", monospace;
+  font-size: .9rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem 0;
+}
+
+.intro-meta p {
+  margin: 0;
+  font-family: "Simplon", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.intro-heading {
+  top: 10rem;      
+  right: 4rem;     
+  font-size: 40rem;
+}
+
+.intro-heading {
+  position: absolute;
+  margin: 0;
+  font-family: "Rainer", sans-serif;
+  color: #000000;
+  line-height: 0.85;
+  z-index: 2;
+}
+
+.intro-image-wrap {
+  position: absolute;
+  top:38%;
+  z-index: 3;
+  width: 26rem;
+}
+
+.intro-image {
+  display: block;
+  width: 100vh;
+  scale: 1.1;
+  height: auto;
+}
+
