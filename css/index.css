@@ -1,5 +1,66 @@
-.hero h1{
-    font-family: 'Bodoni_72', 'serif';
-    color:#F9E41A;
-    font-size: 8rem;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(49, 15, 121, 0.98) 0%,
+    rgba(49, 15, 121, 0.92) 20%,
+    rgba(49, 15, 121, 0.75) 40%,
+    rgba(49, 15, 121, 0.45) 65%,
+    rgba(49, 15, 121, 0.18) 85%,
+    rgba(49, 15, 121, 0) 100%
+  );
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 10%;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navbar ul li a {
+  position: relative;
+  color: #000000;
+  font-family: "NeueMontreal", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #2323ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.navbar ul li a:hover {
+  color: #2323ff;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+body {
+    background-color: #F4CC50;
+    margin: 0 auto;
 }
