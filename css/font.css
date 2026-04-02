@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: "Rainer N";
+    font-weight: bold;
+	font-style: normal;
+    src: url(../fonts/RainerTrial-Regular.otf) format('truetype');
+}
+
+@font-face {
     font-family: "Simplon";
     font-weight: normal;
 	font-style: monospace;

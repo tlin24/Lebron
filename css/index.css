@@ -1,5 +1,18 @@
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
 header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,31 +25,23 @@ header {
   align-items: center;
 }
 
-header .logo {
-  height: 5rem;  
-  width: auto;
-}
-
 body {
     background-color: #F4CC50;
     margin: 0 auto;
 }
-
-
 
 .intro {
   position: relative;
   min-height: 100vh;
   background-color: #F4CC50;
   overflow: hidden;
-  padding-top: 7rem;
 }
 
 .intro-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: absolute;
-  top: 11rem;
+  top: 6rem;
   left: 4rem;
   right: 4rem;
   width: 35rem;
@@ -52,7 +57,7 @@ body {
 
 .intro-news-heading {
   position: absolute;
-  top: 21rem;
+  top: 16rem;
   left: 4rem;
   margin: 0;
   font-family: "Rainer", sans-serif;
@@ -63,7 +68,7 @@ body {
 
 .intro-p {
   position: absolute;
-  top: 26rem;
+  top: 21rem;
   left: 4rem;
   margin: 0;
   font-family: "Simplon", monospace;
@@ -74,7 +79,7 @@ body {
 }
 
 .intro-heading {
-  top: 10rem;      
+  top: 5rem;      
   right: 4rem;     
   font-size: 40rem;
 }
@@ -88,9 +93,25 @@ body {
   z-index: 2;
 }
 
+.intro-heading2 {
+  top: 57rem;      
+  right: 4rem;     
+  font-size: 1.5rem;
+  letter-spacing: -.5px;
+}
+
+.intro-heading2 {
+  position: absolute;
+  margin: 0;
+  font-family: "NeueMontreal", sans-serif;
+  color: #000000;
+  line-height: 0.85;
+  z-index: 2;
+}
+
 .intro-image-wrap {
   position: absolute;
-  top:38%;
+  top:31%;
   z-index: 3;
   width: 26rem;
 }
