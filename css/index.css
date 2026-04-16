@@ -1,16 +1,12 @@
 ::-webkit-scrollbar {
   width: 4px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #000000;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
-
 header {
   position: relative;
   top: 0;
@@ -18,25 +14,22 @@ header {
   width: 100%;
   z-index: 9999;
   height: 7rem;
-  background-color: #310F79;
-
+  background-color: #310f79;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 body {
-    background-color: #F4CC50;
-    margin: 0 auto;
+  background-color: #f4cc50;
+  margin: 0 auto;
 }
-
 .intro {
   position: relative;
-  min-height: 100vh;
-  background-color: #F4CC50;
+  min-height: 90vh;
+  background-color: #f4cc50;
   overflow: hidden;
+  padding-bottom: -5rem;
 }
-
 .intro-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,14 +40,12 @@ body {
   width: 35rem;
   z-index: 3;
 }
-
 .intro-meta p {
   font-family: "Simplon M", monospace;
-  font-size: .9rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   margin: 0 0 0.5rem 0;
 }
-
 .intro-news-heading {
   position: absolute;
   top: 16rem;
@@ -65,7 +56,6 @@ body {
   max-width: 34rem;
   z-index: 3;
 }
-
 .intro-p {
   position: absolute;
   top: 21rem;
@@ -77,13 +67,11 @@ body {
   line-height: 1.6;
   z-index: 3;
 }
-
 .intro-heading {
-  top: 5rem;      
-  right: 4rem;     
+  top: 5rem;
+  right: 4rem;
   font-size: 40rem;
 }
-
 .intro-heading {
   position: absolute;
   margin: 0;
@@ -92,14 +80,12 @@ body {
   line-height: 0.85;
   z-index: 2;
 }
-
 .intro-heading2 {
-  top: 57rem;      
-  right: 4rem;     
+  top: 57rem;
+  right: 4rem;
   font-size: 1.5rem;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
 }
-
 .intro-heading2 {
   position: absolute;
   margin: 0;
@@ -108,10 +94,9 @@ body {
   line-height: 0.85;
   z-index: 2;
 }
-
 .intro-image-wrap {
   position: absolute;
-  top:31%;
+  top: 31%;
   z-index: 3;
   width: 26rem;
 }
@@ -124,5 +109,79 @@ body {
 }
 
 .context {
-  background-color:#310F79;
+  background-color: #310f79;
+}
+
+.story-section {
+  border-top: 1px solid #000000;
+}
+
+.story-section,
+.players-section {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  border-bottom: 1px solid #000000;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.player-card {
+  background-color: #310f79;
+  border: 1px solid #000000;
+  padding: 1.5rem;
+  min-height: 24rem;
+}
+
+.player-tag {
+  font-family: "NeueMontreal", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-self: start;
+  position: sticky;
+  top: 9rem;
+}
+
+.section-label p {
+  margin: 0;
+  font-family: "Simplon M", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.section-content {
+  max-width: 70rem;
+}
+
+.section-content h2,
+.player-card h3 {
+  margin: 0 0 1rem 0;
+  font-family: "Rainer", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 0.95;
+}
+
+.section-content p,
+.player-card p {
+  margin: 0;
+  font-family: "Simplon", monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.player-card p,
+.player-card h3 {
+  color: #f4cc50;
 }

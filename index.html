@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="icon" href="img/icon.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="js/charts.js" defer></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="header-inner"></div>
+    </header>
+
     <main>
       <section class="intro">
         <div class="intro-meta">
@@ -17,34 +25,97 @@
           <p>TERRY LIN</p>
           <p>TRISTAN JOUNG</p>
         </div>
-        
-        <h1 class="intro-news-heading">POWER OR PRECISION, WHO TRULY DEFINES GREATNESS </h1>
-        <p class="intro-p">In the summer of 2016, the basketball world witnessed one of the most dramatic championship series in NBA history as LeBron James and the Cleveland Cavaliers 
-            faced off against Stephen Curry and the Golden State Warriors in the 2016 NBA Finals. Golden State entered the series as heavy favorites after a record-breaking 73-win season, 
-            and they quickly surged to a commanding 3-1 lead, putting Cleveland on the brink of elimination. However, what followed was a historic turnaround led by LeBron James, 
-            who delivered back-to-back 41-point performances in Games 5 and 6, showcasing a level of dominance rarely seen on the Finals stage. As the series shifted back to Oakland for Game 7, 
-            tensions were at their peak, with both teams trading blows in a tightly contested battle. In the closing minutes, James made a defining defensive play with a chase-down block on Andre Iguodala, 
-            followed shortly by Kyrie Irving's clutch three-pointer that gave Cleveland the edge. The Cavaliers held on to secure a 93-89 victory, completing the first 3-1 comeback in Finals history and delivering the franchise's 
-            first championship. LeBron James was named Finals MVP, cementing his legacy, while Curry and the Warriors were left to reflect on a stunning collapse in what had been a historic season.
-        </p>
+
+        <div class="intro-copy">
+          <h1 class="intro-news-heading">
+            POWER OR PRECISION, WHO TRULY DEFINES GREATNESS
+          </h1>
+          <p class="intro-p">
+            In the summer of 2016, the basketball world witnessed one of the
+            most dramatic championship series in NBA history as LeBron James and
+            the Cleveland Cavaliers faced off against Stephen Curry and the
+            Golden State Warriors in the 2016 NBA Finals. Golden State entered
+            the series as heavy favorites after a record-breaking 73-win season,
+            and they quickly surged to a commanding 3-1 lead, putting Cleveland
+            on the brink of elimination. However, what followed was a historic
+            turnaround led by LeBron James, who delivered back-to-back 41-point
+            performances in Games 5 and 6, showcasing a level of dominance
+            rarely seen on the Finals stage. As the series shifted back to
+            Oakland for Game 7, tensions were at their peak, with both teams
+            trading blows in a tightly contested battle. In the closing minutes,
+            James made a defining defensive play with a chase-down block on
+            Andre Iguodala, followed shortly by Kyrie Irving's clutch
+            three-pointer that gave Cleveland the edge. The Cavaliers held on to
+            secure a 93-89 victory, completing the first 3-1 comeback in Finals
+            
+          </p>
+        </div>
 
         <h1 class="intro-heading">RIVALS</h1>
+
         <div class="intro-image-wrap">
-          <img src="img/intro2.png" alt="LeBron James" class="intro-image" />
-        </div>
-        <h1 class="intro-heading2">LEBRON VS CURRY</h1>
-        <div class="context">
-          <h1></h1>
-          <p></p>
+          <img
+            src="img/intro2.png"
+            alt="LeBron James and Stephen Curry"
+            class="intro-image"
+          />
         </div>
 
+        <h1 class="intro-heading2">LEBRON VS CURRY</h1>
       </section>
-      <section class="first_graph"></section>
-      <section class="second_graph"></section>
-      <section class="third_graph"></section>
-      <section class="four_graph"></section>
-      <section class="reflection"></section>
+
+      <section class="story-section">
+        <div class="section-label">
+          <p>01</p>
+          <p>ORIGIN</p>
+        </div>
+
+        <div class="section-content">
+          <h2>ONE CITY. ONE BEGINNING.</h2>
+          <p>
+            LeBron James was born on December 30, 1984, and Stephen Curry was
+            born on March 14, 1988. Both were born in Akron, Ohio at the same
+            medical facility. This small connection gives their rivalry a
+            strange and memorable starting point. Curry was born there while his
+            father, Dell Curry, played for the Cleveland Cavaliers.
+          </p>
+        </div>
+      </section>
+
+      <section class="players-section">
+        <div class="section-label">
+          <p>02</p>
+          <p>BACKGROUND</p>
+        </div>
+
+        <div class="players-grid">
+          <article class="player-card">
+            <p class="player-tag">LEBRON JAMES</p>
+            <h3>The force of control</h3>
+            <p>
+              LeBron was raised by his mother Gloria James in Akron, Ohio. His
+              upbringing was difficult and became part of the motivation that
+              shaped his career and his identity as a father. He entered the NBA
+              with enormous pressure and quickly proved himself as a once in a
+              generation player. His legacy is built on longevity, scoring,
+              playmaking, and the ability to control every part of a game.
+            </p>
+          </article>
+
+          <article class="player-card">
+            <p class="player-tag">STEPHEN CURRY</p>
+            <h3>The force of precision</h3>
+            <p>
+              Curry grew up around the NBA as the son of Dell Curry. Even with
+              that background, he was not seen as a future superstar in the same
+              way LeBron was. Scouts often focused on his size and questioned
+              whether his game would fully translate. He later became one of the
+              most influential players in league history and is widely seen as
+              the greatest shooter ever.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer></footer>
   </body>
 </html>
