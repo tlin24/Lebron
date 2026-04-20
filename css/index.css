@@ -2,7 +2,7 @@
   width: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: white;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -44,7 +44,7 @@ body {
   font-family: "Simplon M", monospace;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
 }
 .intro-news-heading {
   position: absolute;
@@ -68,7 +68,7 @@ body {
   z-index: 3;
 }
 .intro-heading {
-  top: 5rem;
+  top: 3rem;
   right: 4rem;
   font-size: 40rem;
 }
@@ -81,7 +81,7 @@ body {
   z-index: 2;
 }
 .intro-heading2 {
-  top: 57rem;
+  top: 40rem;
   right: 4rem;
   font-size: 1.5rem;
   letter-spacing: -0.5px;
@@ -142,7 +142,7 @@ body {
   font-family: "NeueMontreal", sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .section-label {
@@ -150,19 +150,24 @@ body {
   flex-direction: column;
   gap: 0.25rem;
   align-self: start;
-  position: sticky;
   top: 9rem;
 }
 
 .section-label p {
   margin: 0;
   font-family: "Simplon M", monospace;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
+  color:#310f79;
 }
 
 .section-content {
   max-width: 70rem;
+}
+
+.section-content h2,
+.section-content p {
+  color:#310f79;
 }
 
 .section-content h2,
@@ -185,3 +190,4 @@ body {
 .player-card h3 {
   color: #f4cc50;
 }
+
