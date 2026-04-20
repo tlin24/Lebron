@@ -32,7 +32,6 @@ html {
   opacity: 0.7;
 }
 
-
 header {
   position: fixed;
   top: 0;
@@ -187,7 +186,7 @@ body {
   font-family: "Simplon M", monospace;
   font-size: 1rem;
   letter-spacing: 0.08em;
-  color:#310f79;
+  color: #310f79;
 }
 
 .section-content {
@@ -197,7 +196,7 @@ body {
 
 .section-content h2,
 .section-content p {
-  color:#310f79;
+  color: #310f79;
 }
 
 .section-content h2,
@@ -269,8 +268,8 @@ body {
 
 .player-feature-content {
   max-width: 48rem;
-  color:#f4cc50;
-  left:-13%
+  color: #f4cc50;
+  left: -13%;
 }
 
 .player-tag {
@@ -483,4 +482,118 @@ body {
 .takeaways-section .takeaway-quote {
   margin-top: 3rem;
   color: #f5f5f5;
+}
+
+.reflection-section {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  min-height: 100vh;
+
+  background: url("../img/lebron-curry-bg2.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.reflection-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  min-height: 100vh;
+
+  background: url("../img/REFLECTION.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.reflection-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+  to right,
+  rgba(244, 204, 80, 0.9),
+  rgba(244, 204, 80, 0.75),
+  rgba(244, 204, 80, 0.55)
+);
+
+  z-index: 0;
+}
+
+.reflection-section .section-label,
+.reflection-content {
+  position: relative;
+  z-index: 1;
+}
+
+.reflection-section .section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.reflection-section .section-label p {
+  margin: 0;
+  font-family: "Simplon M", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #310f79;
+}
+
+.reflection-content {
+  max-width: 56rem;
+  padding-top: 11rem;
+}
+
+.reflection-section .graph-tag {
+  margin-bottom: 3rem;
+  font-family: "NeueMontreal", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #310f79;
+
+}
+
+.reflection-section h2 {
+  margin-bottom: 1rem;
+  font-family: "Rainer", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 0.95;
+  color: #310f79;
+}
+
+.reflection-section p {
+  margin-bottom: 1.2rem;
+  font-family: "Simplon", monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #310f79;
+  max-width: 56rem;
+}
+
+.site-footer {
+  padding: 3rem 4rem;
+  border-top: 1px solid #000000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  background-color: #310f79;
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  margin: 0;
+  font-family: "Simplon M", monospace;
+  font-size: .8rem;
+  letter-spacing: 0.1em;
+  color: #f4cc50;
+  text-align: center;
 }
