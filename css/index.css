@@ -467,6 +467,7 @@ body {
   font-size: clamp(2rem, 4vw, 3.6rem);
   line-height: 0.95;
   color: #f4cc50;
+  margin-top: 2rem;
 }
 
 .takeaways-section p {
