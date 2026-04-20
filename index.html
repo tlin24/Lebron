@@ -11,15 +11,23 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <script src="js/charts.js" defer></script>
+    <script src="js/graphs.js" defer></script>
   </head>
   <body>
     <header>
-      <div class="header-inner"></div>
+      <div class="header-inner">
+        <nav class="navbar">
+          <a href="#intro">INTRO</a>
+          <a href="#origin">ORIGIN</a>
+          <a href="#background">BACKGROUND</a>
+          <a href="#lebron">LEBRON</a>
+          <a href="#curry">CURRY</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="intro">
+      <section class="intro" id="intro">
         <div class="intro-left">
           <div class="intro-meta">
             <p>IAT 355</p>
@@ -33,22 +41,22 @@
             </h1>
             <p class="intro-p">
               In the summer of 2016, the basketball world witnessed one of the
-              most dramatic championship series in NBA history as LeBron James and
-              the Cleveland Cavaliers faced off against Stephen Curry and the
-              Golden State Warriors in the 2016 NBA Finals. Golden State entered
-              the series as heavy favorites after a record-breaking 73-win season,
-              and they quickly surged to a commanding 3-1 lead, putting Cleveland
-              on the brink of elimination. However, what followed was a historic
-              turnaround led by LeBron James, who delivered back-to-back 41-point
-              performances in Games 5 and 6, showcasing a level of dominance
-              rarely seen on the Finals stage. As the series shifted back to
-              Oakland for Game 7, tensions were at their peak, with both teams
-              trading blows in a tightly contested battle. In the closing minutes,
-              James made a defining defensive play with a chase-down block on
-              Andre Iguodala, followed shortly by Kyrie Irving's clutch
-              three-pointer that gave Cleveland the edge. The Cavaliers held on to
-              secure a 93-89 victory, completing the first 3-1 comeback in Finals
-              
+              most dramatic championship series in NBA history as LeBron James
+              and the Cleveland Cavaliers faced off against Stephen Curry and
+              the Golden State Warriors in the 2016 NBA Finals. Golden State
+              entered the series as heavy favorites after a record-breaking
+              73-win season, and they quickly surged to a commanding 3-1 lead,
+              putting Cleveland on the brink of elimination. However, what
+              followed was a historic turnaround led by LeBron James, who
+              delivered back-to-back 41-point performances in Games 5 and 6,
+              showcasing a level of dominance rarely seen on the Finals stage.
+              As the series shifted back to Oakland for Game 7, tensions were at
+              their peak, with both teams trading blows in a tightly contested
+              battle. In the closing minutes, James made a defining defensive
+              play with a chase-down block on Andre Iguodala, followed shortly
+              by Kyrie Irving's clutch three-pointer that gave Cleveland the
+              edge. The Cavaliers held on to secure a 93-89 victory, completing
+              the first 3-1 comeback in Finals
             </p>
             <div class="intro-image-wrap">
               <img
@@ -66,7 +74,7 @@
         </div>
       </section>
 
-      <section class="story-section">
+      <section class="story-section" id="origin">
         <div class="section-label">
           <p>01</p>
           <p>ORIGIN</p>
@@ -75,16 +83,17 @@
         <div class="section-content">
           <h2>ONE CITY. ONE BEGINNING.</h2>
           <p>
-            <strong>Lebron James</strong> was born on December 30, 1984, and <strong>Stephen Curry</strong> was
-            born on March 14, 1988. Both were born in Akron, Ohio at the same
-            medical facility. This small connection gives their rivalry a
-            strange and memorable starting point. Curry was born there while his
-            father, Dell Curry, played for the Cleveland Cavaliers.
+            <strong>Lebron James</strong> was born on December 30, 1984, and
+            <strong>Stephen Curry</strong> was born on March 14, 1988. Both were
+            born in Akron, Ohio at the same medical facility. This small
+            connection gives their rivalry a strange and memorable starting
+            point. Curry was born there while his father, Dell Curry, played for
+            the Cleveland Cavaliers.
           </p>
         </div>
       </section>
 
-      <section class="players-section">
+      <section class="players-section" id="background">
         <div class="section-label">
           <p>02</p>
           <p>BACKGROUND</p>
@@ -102,7 +111,7 @@
               generation player. His legacy is built on longevity, scoring,
               playmaking, and the ability to control every part of a game.
             </p>
-            <img src="img/">
+            <img src="img/" />
           </article>
 
           <article class="player-card">
@@ -116,8 +125,118 @@
               most influential players in league history and is widely seen as
               the greatest shooter ever.
             </p>
-            <img src="img/">
           </article>
+        </div>
+      </section>
+
+      <section class="player-feature lebron-feature" id="lebron">
+        <div class="section-label">
+          <p>04</p>
+          <p>LEBRON</p>
+        </div>
+
+        <div class="player-feature-content">
+          <p class="player-tag">LEBRON JAMES</p>
+          <h2>Strengths and weaknesses</h2>
+          <p>
+            LeBron is defined by basketball IQ, playmaking vision, physical
+            dominance, versatility, and durability. He can score, create, and
+            defend across multiple positions. His most discussed weaknesses are
+            free throw shooting, an outside shot that has not always been elite,
+            and a ball dominant style that can narrow how teammates operate
+            around him.
+          </p>
+        </div>
+        <div class="right-stats">
+          <p>4x NBA Champion</p>
+          <p>4x MVP</p>
+          <p>All-time Leading Scorer</p>
+        </div>
+      </section>
+
+      <section class="player-feature curry-feature" id="curry">
+        <div class="section-label">
+          <p>05</p>
+          <p>CURRY</p>
+        </div>
+
+        <div class="player-feature-content">
+          <p class="player-tag">STEPHEN CURRY</p>
+          <h2>Strengths and weaknesses</h2>
+          <p>
+            Curry is defined by shooting, off ball movement, ball handling, and
+            offensive gravity. He changed the way defenses operate because of
+            how far from the basket he can still threaten a shot. His most
+            discussed weaknesses include size on defense, scoring variance that
+            comes with a jump shooting style, and occasional turnovers under
+            pressure.
+          </p>
+        </div>
+
+        <div class="right-stats">
+          <p>4x NBA Champion</p>
+          <p>2x MVP</p>
+          <p>Greatest Shooter Ever</p>
+        </div>
+      </section>
+
+      <section class="graph-section" id="timeline">
+        <div class="section-label">
+          <p>06</p>
+          <p>TIMELINE</p>
+        </div>
+
+        <div class="graph-content">
+          <p class="graph-tag">CAREER MILESTONES</p>
+          <h2>CAREERS IN PARALLEL</h2>
+          <p>
+            This timeline maps key milestones in both players careers, showing
+            how their paths developed before intersecting on the NBA's biggest
+            stage.
+          </p>
+
+          <div id="chart1" class="chart-box"></div>
+        </div>
+      </section>
+      <section class="graph-section" id="season-stats">
+        <div class="section-label">
+          <p>07</p>
+          <p>STATS</p>
+        </div>
+
+        <div class="graph-content">
+          <p class="graph-tag">SEASON COMPARISON</p>
+          <h2>HEAD TO HEAD NUMBERS</h2>
+          <p>
+            This comparison looks across points, rebounds, and assists over
+            multiple seasons to show how each player impacts the game in
+            different ways.
+          </p>
+
+          <div class="chart-box">
+            <div id="chart2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="graph-section" id="evolution">
+        <div class="section-label">
+          <p>08</p>
+          <p>EVOLUTION</p>
+        </div>
+
+        <div class="graph-content">
+          <p class="graph-tag">LONG TERM TRENDS</p>
+          <h2>HOW THEIR GAMES SHIFTED</h2>
+          <p>
+            Tracking performance over time highlights how LeBron and Curry
+            adapted their game while sustaining impact across different years of
+            their careers.
+          </p>
+
+          <div class="chart-box">
+            <div id="chart3"></div>
+          </div>
         </div>
       </section>
     </main>
