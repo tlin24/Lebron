@@ -29,6 +29,17 @@ const spec = {
   width: 1200,
   height: 400,
   autosize: { type: "fit-x", contains: "padding" },
+
+  title: {
+    text: "LeBron vs. Curry: Season Stats from 2015-2023",
+    color: "#ffffff",
+    font: "monospace",
+    fontSize: 18,
+    fontWeight: "bold",
+    anchor: "start",
+    offset: 12
+  },
+
   data: {
     values: [
       { Player: "LeBron James", Year: 2003, Value: 1, Event: "Drafted #1" },
@@ -39,6 +50,7 @@ const spec = {
       { Player: "Stephen Curry", Year: 2017, Value: 3, Event: "Warriors Dynasty" }
     ]
   },
+
   layer: [
     {
       mark: {
@@ -115,12 +127,13 @@ const spec = {
       }
     }
   ],
+
   config: sharedConfig
 };
 
 const spec2 = {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-  width: 85,
+  width: 105,
   height: 400,
   data: { url: "data/Lebron_Curry.csv" },
   transform: [
@@ -153,7 +166,17 @@ const spec2 = {
     anchor: "start",
     offset: 12
   },
-  config: sharedConfig
+  config: {
+    ...sharedConfig,
+    header: {
+      labelColor: "#ffffff",
+      labelFont: "monospace",
+      labelFontSize: 11,
+      titleColor: "#ffffff",
+      titleFont: "monospace",
+      titleFontSize: 13
+    }
+  }
 };
 
 const spec3 = {
@@ -201,12 +224,68 @@ const spec3 = {
       labelColor: "#ffffff",
       labelFont: "monospace",
       labelFontSize: 13,
-      labelFontWeight: "bold"
+      labelFontWeight: "bold",
+      titleColor: "#ffffff",
+      titleFont: "monospace",
+      titleFontSize: 13,
+      titleFontWeight: "bold"
     }
   }
 };
+
+function animateLineMarks(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  const svg = container.querySelector("svg");
+  if (!svg) return;
+
+  svg.style.opacity = "1";
+
+  const lines = container.querySelectorAll(".mark-line path");
+
+  lines.forEach((path) => {
+    const length = path.getTotalLength();
+
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    path.style.transition = "none";
+
+    requestAnimationFrame(() => {
+      path.style.transition = "stroke-dashoffset 1.4s ease";
+      path.style.strokeDashoffset = "0";
+    });
+  });
+}
+
+function fadeInChart(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  const svg = container.querySelector("svg");
+  if (!svg) return;
+
+  svg.style.opacity = "1";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  vegaEmbed("#chart1", spec, { actions: false }).catch(err => console.error("chart1:", err));
-  vegaEmbed("#chart2", spec2, { actions: false }).catch(err => console.error("chart2:", err));
-  vegaEmbed("#chart3", spec3, { actions: false }).catch(err => console.error("chart3:", err));
+  Promise.all([
+    vegaEmbed("#chart1", spec, { actions: false, renderer: "svg" }),
+    vegaEmbed("#chart2", spec2, { actions: false, renderer: "svg" }),
+    vegaEmbed("#chart3", spec3, { actions: false, renderer: "svg" })
+  ])
+    .then(() => {
+      document.querySelector("#chart1")?.addEventListener("click", () => {
+        animateLineMarks("#chart1");
+      });
+
+      document.querySelector("#chart2")?.addEventListener("click", () => {
+        fadeInChart("#chart2");
+      });
+
+      document.querySelector("#chart3")?.addEventListener("click", () => {
+        animateLineMarks("#chart3");
+      });
+    })
+    .catch((err) => console.error(err));
 });

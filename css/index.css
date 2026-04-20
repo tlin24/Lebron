@@ -323,12 +323,11 @@ body {
   grid-template-columns: 11rem 1fr;
   gap: 2rem;
   padding: 4rem;
-  border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
 }
 
 .graph-content {
-  max-width: 70rem;
+  max-width: 80rem;
 }
 
 .graph-tag {
@@ -336,7 +335,7 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   margin: 0 0 1rem 0;
-  color: #000000;
+  color: #ffffff;
 }
 
 .graph-content h2 {
@@ -369,10 +368,117 @@ body {
   box-sizing: border-box;
   overflow-x: auto;
   overflow-y: hidden;
+  border-radius: 25px;
 }
 
-#chart1,
-#chart2,
-#chart3 {
-  border-radius: 20px;
+#chart1 svg,
+#chart2 svg,
+#chart3 svg {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#chart2 .mark-rect rect {
+  opacity: 0;
+}
+
+.chart-box {
+  position: relative;
+}
+
+.chart-label {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+
+  font-family: "Simplon Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+
+  color: #f5f5f5;
+  opacity: 0.7;
+
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.chart-box:hover .chart-label {
+  opacity: 1;
+}
+
+.takeaways-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  border-bottom: 1px solid #000000;
+  min-height: 100vh;
+
+  background: url("../img/curryvslebron.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.takeaways-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(49, 15, 121, 0.5);
+  z-index: 0;
+}
+
+.takeaways-section .section-label,
+.takeaways-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.takeaways-section .section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-self: start;
+}
+
+.takeaways-section .section-label p {
+  margin: 0;
+  font-family: "Simplon M", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #f4cc50;
+}
+
+.takeaways-overlay {
+  max-width: 56rem;
+  padding-top: 11rem;
+}
+
+.takeaways-section .graph-tag {
+  margin: 0 0 1rem 0;
+  font-family: "NeueMontreal", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #f4cc50;
+}
+
+.takeaways-section h2 {
+  margin: 0 0 1rem 0;
+  font-family: "Rainer", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 0.95;
+  color: #f4cc50;
+}
+
+.takeaways-section p {
+  margin: 0 0 1.2rem 0;
+  font-family: "Simplon", monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #f4cc50;
+  max-width: 56rem;
+}
+
+.takeaways-section .takeaway-quote {
+  margin-top: 2rem;
+  color: #f5f5f5;
 }
