@@ -31,7 +31,7 @@ const spec = {
   autosize: { type: "fit-x", contains: "padding" },
 
   title: {
-    text: "LeBron vs. Curry: Season Stats from 2015-2023",
+    text: "Key Milestones in their Careers",
     color: "#ffffff",
     font: "monospace",
     fontSize: 18,
