@@ -602,6 +602,11 @@ body {
   text-align: center;
 }
 
+.site-footer a {
+  color: #f4cc50;
+  text-decoration: none;
+}
+
 @media (max-width: 1600px) {
   .intro-heading {
     font-size: 32rem;
