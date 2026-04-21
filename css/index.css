@@ -604,7 +604,10 @@ body {
 
 .site-footer a {
   color: #f4cc50;
-  text-decoration: none;
+}
+
+.data-source {
+  padding-top: 1rem;
 }
 
 @media (max-width: 1600px) {
