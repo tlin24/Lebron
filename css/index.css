@@ -55,9 +55,10 @@ body {
   min-height: 90vh;
   background-color: #f4cc50;
   overflow: hidden;
-  padding-bottom: -5rem;
   margin-top: 5rem;
+  padding-bottom: 0;
 }
+
 .intro-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -68,12 +69,14 @@ body {
   width: 35rem;
   z-index: 3;
 }
+
 .intro-meta p {
   font-family: "Simplon M", monospace;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   margin: 0 0 1rem 0;
 }
+
 .intro-news-heading {
   position: absolute;
   top: 16rem;
@@ -83,7 +86,9 @@ body {
   font-size: 3rem;
   max-width: 34rem;
   z-index: 3;
+  line-height: 0.95;
 }
+
 .intro-p {
   position: absolute;
   top: 21rem;
@@ -95,33 +100,32 @@ body {
   line-height: 1.6;
   z-index: 3;
 }
-.intro-heading {
-  top: 5rem;
-  right: 4rem;
-  font-size: 40rem;
-}
+
 .intro-heading {
   position: absolute;
+  top: 5rem;
+  right: 4rem;
   margin: 0;
   font-family: "Rainer", sans-serif;
   color: #000000;
   line-height: 0.85;
   z-index: 2;
+  font-size: 40rem;
 }
-.intro-heading2 {
-  top: 45rem;
-  right: 4rem;
-  font-size: 1.5rem;
-  letter-spacing: -0.5px;
-}
+
 .intro-heading2 {
   position: absolute;
+  top: 45rem;
+  right: 4rem;
   margin: 0;
   font-family: "NeueMontreal", sans-serif;
   color: #000000;
   line-height: 0.85;
   z-index: 2;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
 }
+
 .intro-image-wrap {
   position: absolute;
   top: 31%;
@@ -135,6 +139,7 @@ body {
   scale: 1.1;
   height: auto;
 }
+
 
 .context {
   background-color: #310f79;
@@ -596,4 +601,222 @@ body {
   letter-spacing: 0.1em;
   color: #f4cc50;
   text-align: center;
+}
+
+@media (max-width: 1600px) {
+  .intro-heading {
+    font-size: 32rem;
+  }
+
+  .intro-heading2 {
+    top: 37rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .intro-meta,
+  .intro-news-heading,
+  .intro-p {
+    left: 2.5rem;
+  }
+
+  .intro-meta {
+    top: 5.5rem;
+    width: 30rem;
+  }
+
+  .intro-news-heading {
+    top: 13rem;
+    font-size: 2.5rem;
+    max-width: 28rem;
+  }
+
+  .intro-p {
+    top: 18rem;
+    max-width: 28rem;
+    font-size: 0.95rem;
+  }
+
+  .intro-heading {
+    right: 2rem;
+    top: 6rem;
+    font-size: 26rem;
+  }
+
+  .intro-heading2 {
+    right: 2rem;
+    top: 30rem;
+    font-size: 1.25rem;
+  }
+
+  .intro-image-wrap {
+    width: 22rem;
+    top: 34%;
+  }
+
+  .intro-image {
+    width: 85vh;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .intro {
+    min-height: 78rem;
+  }
+
+  .intro-meta {
+    width: 26rem;
+    left: 2rem;
+    right: auto;
+    top: 5.5rem;
+  }
+
+  .intro-meta p {
+    font-size: 0.8rem;
+  }
+
+  .intro-news-heading {
+    left: 2rem;
+    top: 12rem;
+    font-size: 2.2rem;
+    max-width: 24rem;
+  }
+
+  .intro-p {
+    left: 2rem;
+    top: 16rem;
+    max-width: 24rem;
+    font-size: 0.95rem;
+  }
+
+  .intro-heading {
+    right: 1rem;
+    top: 7rem;
+    font-size: 19rem;
+  }
+
+  .intro-heading2 {
+    right: 1.5rem;
+    top: 25rem;
+    font-size: 1.1rem;
+  }
+
+  .intro-image-wrap {
+    width: 18rem;
+    top: 41%;
+  }
+
+  .intro-image {
+    width: 70vh;
+    scale: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    min-height: auto;
+    padding: 7rem 1.5rem 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .intro-left,
+  .intro-copy,
+  .intro-right {
+    position: relative;
+    width: 100%;
+  }
+
+  .intro-meta,
+  .intro-news-heading,
+  .intro-p,
+  .intro-heading,
+  .intro-heading2,
+  .intro-image-wrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+  }
+
+  .intro-meta {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+  }
+
+  .intro-meta p {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-news-heading {
+    font-size: 2.2rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .intro-p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .intro-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .intro-heading {
+    font-size: clamp(6rem, 24vw, 10rem);
+    line-height: 0.9;
+  }
+
+  .intro-heading2 {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  .intro-image-wrap {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .intro-image {
+    width: 100%;
+    height: auto;
+    scale: 1;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 6.5rem 1rem 2.5rem 1rem;
+  }
+
+  .intro-meta {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .intro-news-heading {
+    font-size: 1.8rem;
+  }
+
+  .intro-p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .intro-heading {
+    font-size: clamp(4.8rem, 22vw, 7rem);
+  }
+
+  .intro-heading2 {
+    font-size: 0.9rem;
+  }
 }
