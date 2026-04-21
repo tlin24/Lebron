@@ -140,7 +140,6 @@ body {
   height: auto;
 }
 
-
 .context {
   background-color: #310f79;
 }
@@ -658,7 +657,6 @@ body {
     width: 85vh;
   }
 }
-
 
 @media (max-width: 1024px) {
   .intro {
